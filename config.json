@@ -1,0 +1,4 @@
+{
+    "masterUrl": "http://localhost:3333/master/api",
+    "socketUrl": "http://localhost:4001/"
+}
