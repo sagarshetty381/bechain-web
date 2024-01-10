@@ -3,21 +3,20 @@ import supabaseClient from '../helper/SupabaseClient';
 import { useNavigate } from 'react-router-dom';
 import { Player } from '@lordicon/react';
 import StorageService from '../helper/StorageService';
-const home = require('../assets/home.json');
 const logo = require('../assets/bechain_logo.png')
 
 const NavigationMenu = () => {
   const navigate = useNavigate();
   const playerRef = useRef<Player>(null);
 
-  useEffect(() => { 
+  useEffect(() => {
     playerRef.current?.playFromBeginning();
     document.querySelectorAll('.menu-item-container')[0].classList += ' menu-item-clicked';
-  },[])
+  }, [])
 
-  const navigateToItem = (e: any) => { 
-    if(e.target.className !== 'menu-item-container') return;
-    document.querySelectorAll('.menu-item-clicked').forEach((item) => { 
+  const navigateToItem = (e: any) => {
+    if (e.target.className !== 'menu-item-container') return;
+    document.querySelectorAll('.menu-item-clicked').forEach((item) => {
       item.classList.remove('menu-item-clicked');
     })
     e.target.classList += ' menu-item-clicked';
