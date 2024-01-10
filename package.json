@@ -2,11 +2,11 @@
   "name": "bechain",
   "version": "1.0.0",
   "description": "A dating app",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx parcel index.html",
-    "tw": "npx tailwindcss -i ./index.css -o ./dist/output.css --watch"
+    "tw": "npx tailwindcss -i ./index.css -o ./dist/output.css --watch",
+    "build": "parcel build index.html"
   },
   "author": "Sagar Shetty",
   "license": "ISC",
