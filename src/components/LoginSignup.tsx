@@ -38,7 +38,7 @@ const LoginSignup = () => {
                 </div>
             </div>
             <div className='template-section'>
-                <img src={require('../assets/bechain_background.jpg')} alt="" />
+                <img src={require('../assets/bechain_background.webp')} alt="" />
                 <p>Experience love with the fastest growing community of Love Seekers, because you deserve to be loved.💖</p>
                 <p style={{ top: 'auto', left: 'auto', bottom: '20px', width: '100%', textAlign: 'center' }}>Baked with 💖 in India</p>
             </div>
