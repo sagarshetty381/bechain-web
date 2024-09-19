@@ -1,0 +1,323 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+body,
+html {
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+    font-family: "Sevillana", cursive;
+}
+@layer components {
+    .form-input {
+        @apply pl-2 border-2 border-gray-200 border-solid rounded-md text-bcblue focus:outline-none;
+    }
+
+    .form-container {
+        @apply flex items-center h-10 p-1 mb-4 border-2 border-solid border-gray-200 rounded-md focus:outline-none focus:placeholder-bcorange focus:ring-[1.5px] focus:ring-bcorange focus:border-transparent transition-all duration-100 ease-in-out;
+    }
+
+    .menu-item-container {
+        @apply flex flex-col items-center justify-center p-2 border-transparent border-y-4 hover:cursor-pointer *:hover:text-bcblue hover:bg-[#ffe4c4] transition-all duration-100 ease-in-out;
+    }
+
+    .menu-item-img {
+        @apply object-contain w-10 h-10 p-1 bg-blend-color-burn;
+    }
+
+    .menu-item-text {
+        @apply font-bold text-bcorange hover:text-bcblue;
+    }
+
+    .menu-item-clicked {
+        /* @apply border-y-4 border-dotted border-bcblue bg-[#ffe4c4]; */
+            @apply *:text-bcblue bg-white;
+    }
+
+    .active {
+        @apply text-lg font-semibold;
+    }
+
+    .sender {
+        @apply self-end rounded-t-md rounded-bl-md;
+    }
+
+    .receiver {
+        @apply rounded-t-md rounded-br-md;
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #FAF9F6;
+    /* overflow: hidden; */
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); */
+
+* {
+    /* font-family: "Poppins", sans-serif; */
+    margin: 0;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container,
+.reactEasyCrop_Image {
+    height: 100%;
+}
+
+.cropped-img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.aspect-ratios {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.navigation-container {
+    width: 300px;
+    height: 100vh;
+    border: none;
+    background-color: #fff4e8;
+    border-right: 4px dotted #ef810f;
+
+    img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+    }
+}
+
+.layout-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards_container {
+    width: 40vmin;
+    height: 50vmin;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 40vmin;
+    height: 50vmin;
+    position: absolute;
+    border-radius: 10px;
+    cursor: grab;
+    transition: all 0.3s ease-in-out;
+}
+
+.card img {
+    width: 40vmin;
+    height: 50vmin;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    position: relative;
+    border-radius: 10px;
+}
+
+.card p {
+    color: #ffffff;
+    position: relative;
+    top: -40px;
+    padding: 10px;
+    background-color: #06385173;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.button_container {
+    width: 50vmin;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+    img {
+        width: 8vmin;
+        background: null;
+    }
+}
+.circles {
+    height: 100vmin;
+        width: 100vmin;
+    position: absolute;
+
+    >div {
+        animation: growAndFade 3s infinite ease-out;
+        background-color: #ef810f;
+        border-radius: 50%;
+        height: 100%;
+        opacity: 0;
+        width: 100%;
+        position: absolute;
+    }
+
+    .circle1 {
+        animation-delay: 1s;
+    }
+
+    .circle2 {
+        animation-delay: 2s;
+    }
+
+    .circle3 {
+        animation-delay: 3s;
+    }
+}
+
+@keyframes growAndFade {
+    0% {
+        opacity: .25;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.login-section {
+    flex-grow: 1;
+    width: 35%;
+    border-right: 5px solid #ef810f;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff4e8;
+
+    img {
+        width: 70%;
+        height: 80px;
+        object-fit: cover;
+        margin: 10px;
+    }
+
+}
+
+.input-section {
+    margin: auto 0;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+        width: 75%;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 5px none;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    input[type=button] {
+        background-color: #063851;
+        color: #ffffff;
+    }
+}
+
+.template-section {
+    flex-grow: 1;
+    width: 65%;
+    height: 100%;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        filter: blur(3px);
+    }
+
+    p {
+        color: #ffffff;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        font-size: x-large;
+    }
+}
+.pref-gender.active {
+    @apply text-white bg-bcorange;
+}
+
+@keyframes matchAnimation {
+    0% {
+        /* opacity: 1; */
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    25% {
+        /* opacity: 1; */
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+
+    100% {
+        /* opacity: 0; */
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        /* opacity: 0; */
+    }
+
+    75% {
+        transform: translateX(2%);
+    }
+
+    100% {
+        transform: translateX(0%);
+        /* opacity: 1; */
+    }
+}
+
+.video-chat-enter {
+    animation: slideInFromLeft 0.5s ease-out forwards;
+}
