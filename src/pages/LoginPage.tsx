@@ -50,12 +50,12 @@ const LoginPage = () => {
                     StorageService.setItem('refresh_token', res.payload.refreshToken);
                     StorageService.setItem('user', res.payload.user);
                     navigation('/profile');
+                    setLoading(false);
                 }
             }).catch((err) => {
                 toastError("Error", err.message);
                 setLoading(false);
             })
-        setLoading(false);
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
