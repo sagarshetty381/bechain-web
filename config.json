@@ -1,3 +1,4 @@
 {
+    "socketUrl": "https://socket-service-vvzw.onrender.com",
     "masterUrl": "https://socket-service-vvzw.onrender.com/master/api"
 }
