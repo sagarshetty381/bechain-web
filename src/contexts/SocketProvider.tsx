@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { io, Socket } from 'socket.io-client'
 import StorageService from "../helper/StorageService";
 import { SocketEvents } from "../enums/socketEvents";
+import * as config from '../../config.json';
 
 interface SocketProviderProps {
     children?: React.ReactNode;
@@ -50,7 +51,7 @@ export const SocketProvider: React.FC<SocketProviderProps> = ({ children }) => {
     const [question, setQuestion] = useState<string[]>([]);
 
     useEffect(() => {
-        const _socket = io('http://localhost:3333');
+        const _socket = io(config.socketUrl);
         console.log("Socket Connecting");
 
         _socket.on('connect', () => {

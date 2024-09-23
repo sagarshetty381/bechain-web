@@ -9,10 +9,12 @@ import { useToastService } from '../hooks/useToastService';
 const LoginPage = () => {
     const params = useParams();
     const [loading, setLoading] = React.useState(false);
+    const [loaderMsg, setLoaderMsg] = React.useState("");
     const { toastError, toastSuccess } = useToastService();
 
     useEffect(() => {
         if (params.deeplink) {
+            setLoaderMsg("Signing in through deep link... Please wait.");
             signInThroughDeepLink(params.deeplink);
         }
     }, []);
@@ -80,7 +82,7 @@ const LoginPage = () => {
                 <p className='relative '>Experience love with the fastest growing community of Love Seekers, because you deserve to be loved.💖</p>
                 <p className='absolute bottom-3'>Baked with 💖 in India</p>
             </div>
-            {loading && <LoaderScreen />}
+            {loading && <LoaderScreen msg={loaderMsg} />}
         </div >
     );
 }
