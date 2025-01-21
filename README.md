@@ -3,11 +3,11 @@ This is a dating app built with ReactJS
 
 Backend Repo Link: 
 https://github.com/sagarshetty381/socket-service
-
-Click <a href="https://bechaindev.vercel.app/login/U2FsdGVkX1%2F74KqoGvGSSXMoXtoBSAzN7VffLo0jBW7fLwoLNCS8x7lElZ7jRyL4wm%2FD2JFvHwpgvk9NSg4bJV8nEVHlg1PcaPlN4TPCA18%3D">here</a> for the login deeplink
 <br/>
 
-### Built with:
+### Click <a href="https://bechaindev.vercel.app/login/U2FsdGVkX1%2F74KqoGvGSSXMoXtoBSAzN7VffLo0jBW7fLwoLNCS8x7lElZ7jRyL4wm%2FD2JFvHwpgvk9NSg4bJV8nEVHlg1PcaPlN4TPCA18%3D">here</a> for the login deeplink
+
+### Tech stack:
 * <img src="https://img.shields.io/badge/Node.js-339933?logo=Node.js&logoColor=white"/>
 * <img src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react"/>
 
